@@ -1,0 +1,49 @@
+{
+    "levels": [
+        {
+            "name": "Firework",
+            "creator": "TrickGMD",
+            "completionDate": "18-07-2025",
+            "attempts": "70137",
+            "enjoyment": "8/10",
+            "worstFail": "64",
+            "videoLink": "https://youtu.be/KTgeavp7KEM?si=nvINEofcnHS99f9j"
+        },
+        {
+            "name": "Tartarus",
+            "creator": "ItzDolphy",
+            "completionDate": "27-09-2024",
+            "attempts": "77694",
+            "enjoyment": "5/10",
+            "worstFail": "86",
+            "videoLink": "https://youtu.be/s54xkGOLHsk?si=OyXAIciYAqkHh824"
+        },
+        {
+            "name": "Shukketsu",
+            "creator": "zYuko",
+            "completionDate": "01-06-2024",
+            "attempts": "87449",
+            "enjoyment": "7/10",
+            "worstFail": "86",
+            "videoLink": "https://youtu.be/9GCy_y6W7ek?si=5I6kHZf_dM88t42W"
+        },
+        {
+            "name": "Judgement Knights",
+            "creator": "HangerLord",
+            "completionDate": "12-02-2025",
+            "attempts": "45457",
+            "enjoyment": "9/10",
+            "worstFail": "79",
+            "videoLink": "https://youtu.be/xGqamrPxSjw?si=lnGkSalJs-ThPau2"
+        },
+        {
+            "name": "Thinking Space",
+            "creator": "Atomic",
+            "completionDate": "25-08-2025",
+            "attempts": "12718",
+            "enjoyment": "3/10",
+            "worstFail": "91",
+            "videoLink": "https://youtu.be/n8mR0zHPuII?si=JilHf_aT9s8RsND1"
+        }
+    ]
+}

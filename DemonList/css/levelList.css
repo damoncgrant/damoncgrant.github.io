@@ -1,0 +1,91 @@
+body {
+    font-family: sans-serif;
+}
+
+.levelContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.levelCard {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border: 2px solid lightgray;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add the shadow */
+    border-width: 1px;
+    border-radius: 10px;
+    margin: 1%;
+}
+
+.levelCard:hover {
+    transform: scale(1.01);
+}
+
+.levelCard .details {
+    display: none;
+}
+
+.levelCard.open .details {
+    display: grid;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add the shadow */
+    border-top: 1px solid lightgray;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.details p .date {
+    display: none;
+}
+
+.levelCard .mainInfo {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 2fr;
+}
+
+.levelCard .thumbnail {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    padding: 5%;
+    align-self: center;
+    object-fit: cover;
+    margin-left: 5%;
+}
+
+.thumbnail img {
+    border-radius: 10px;
+}
+
+.levelCard h3 {
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    font-size: 30px;
+    text-align: left; 
+    position: relative;
+    top: 10px;
+    left: 50px;
+}
+
+.levelCard h4 {
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    font-size: 24px;
+    text-align: left;
+    position: relative;
+    bottom: 10px;
+    left: 50px;
+}
+
+.levelCard a {
+    width: 246px;
+    height: 144px;
+}

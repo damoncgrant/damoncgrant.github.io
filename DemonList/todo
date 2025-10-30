@@ -1,0 +1,26 @@
+- List my hardest demons on a page similar to pointercrate
+- Last updated date
+  - Change history(?)
+- Color-code based on placements(?)
+- Level card should include:
+  - This will be a Json with multiple layers
+  - For now I can manually update the JSON with new levels
+    - Add a way to fetch the spreadsheet so that I don't need to manually download(?)
+  - Add a script to update level json(?)
+      - Level name
+      - Ceator
+      - Placement
+      - My youtube thumbnail
+        - clicking the thumbnail should direct to the youtube completion
+    - Clicking on a level should expand details and include:
+      - Completion date
+      - Attempts
+      - Enjoyment rating
+      - Worst fail
+        - Could optionally color based on the fluke(?)
+      - AREDL placement(?)
+- Sidebar:
+  - My channel and twitch
+  - My pointercrate standing(?)
+    - With my peak
+  
