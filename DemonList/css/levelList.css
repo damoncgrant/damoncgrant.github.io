@@ -1,5 +1,6 @@
 body {
     font-family: sans-serif;
+    background-color: black;
 }
 
 .levelContainer {
@@ -7,10 +8,26 @@ body {
     flex-direction: column;
     align-items: center;
     margin-top: 2rem;
+    margin-bottom: 5rem;
+
+    /* Animation */
+    animation: slideInFromBottom 1.2s ease-out forwards;
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .levelCard {
     display: flex;
+    background-color: white;
     flex-direction: column;
     width: 50%;
     border: 2px solid lightgray;
@@ -26,18 +43,41 @@ body {
 
 .levelCard .details {
     display: none;
+    
 }
 
 .levelCard.open .details {
     display: grid;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add the shadow */
     border-top: 1px solid lightgray;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 }
 
-.details p .date {
-    display: none;
+.details p.date {
+    padding-top: 15px;
+    grid-column: 2 / span 4;
+    text-align: center;
+    font-size: larger;
+}
+
+.details p.attempts {
+    grid-row: 2;
+    grid-column: 1 / span 2;
+    text-align: center;
+}
+
+.details p.enjoyment {
+    grid-row: 2;
+    grid-column: 3 / span 2;
+    text-align: center;
+}
+
+.details p.worstFail {
+    grid-row: 2;
+    grid-column: 5 / span 2;
+    text-align: center;
 }
 
 .levelCard .mainInfo {

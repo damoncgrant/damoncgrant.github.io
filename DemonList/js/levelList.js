@@ -39,10 +39,10 @@ async function displayLevels() {
         const details = document.createElement("div");
         details.classList.add("details");
         details.innerHTML = `
-            <p class="date">Completed on ${level.completionDate}</p>
-            <p class="attempts">Attempt Count: ${level.attempts.toString()}</p>
-            <p class="enjoyment">Enjoyment: ${level.enjoyment}</p>
-            <p class="worstFail">Worst Fail: ${level.worstFail}%</p>
+            <p class="date">Completed on <b>${level.completionDate}</b></p>
+            <p class="attempts">Attempt Count: <b>${level.attempts.toString()}</b></p>
+            <p class="enjoyment">Enjoyment: <b>${level.enjoyment}</b></p>
+            <p class="worstFail">Worst Fail: <b>${level.worstFail}%</b></p>
         `
 
         levelCard.addEventListener("click", event => {
