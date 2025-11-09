@@ -1,26 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 body {
     font-family: sans-serif;
-    background-color: black;
+    background-color: #2F2B2B;
+}
+
+.pageHeader {
+    height: 4rem;
+    width: 100%;
+    position: fixed;
+    background-color: #4e4c4c;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.65);
+    z-index: 200;
+    opacity: 0.95;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 2px black;
+}
+
+.listLogo {
+    display: flex;
+    flex-direction: row;
+    margin-right: 50px;
+    margin-left: 20px;
+    margin-top: 7px;
+}
+
+.pageHeader .listLogo img{
+    border-radius: 50%;
+    height: 3rem;
+    width: auto;
+    margin-right: 20px;
+}
+
+.pageHeader .listLogo h3 {
+    margin-top: 10px;
+    font-size: 28px;
+}
+
+.pageHeader .wishlist {
+    margin-top: 20px;
+    margin-right: 40px;
+    font-size: 16px;
+    z-index: 201;
+}
+
+/* .wishlist a:link {
+    color: white;
+}
+
+.wishlist a:visited {
+    color: white;
+} */
+
+.pageHeader .socials {
+    margin-top: 20px;
+    margin-right: 40px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+}
+
+.pageHeader .socials img {
+    filter: brightness(0) invert(1);
+    margin-bottom: 20px;
 }
 
 .levelContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 2rem;
     margin-bottom: 5rem;
+    padding-bottom: 5%;
+    padding-top: 5%;
 
     /* Animation */
-    animation: slideInFromBottom 1.2s ease-out forwards;
+    animation: slideInFromBottom 1.2s ease-out forwards,
+    fadeIn 3s;
 }
 
 @keyframes slideInFromBottom {
     0% {
         transform: translateY(100%);
-        opacity: 0;
     }
     100% {
         transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
         opacity: 1;
     }
 }
@@ -35,6 +112,8 @@ body {
     border-width: 1px;
     border-radius: 10px;
     margin: 1%;
+    user-select: none;
+
 }
 
 .levelCard:hover {
@@ -43,16 +122,33 @@ body {
 
 .levelCard .details {
     display: none;
-    
 }
+
 
 .levelCard.open .details {
     display: grid;
+    height: 150px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add the shadow */
     border-top: 1px solid lightgray;
     align-items: center;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(2, 1fr);
+}
+
+.levelCard.blinked {
+    animation: blink 0.2s;
+}
+
+@keyframes blink {
+    0% {
+        box-shadow: 0 0 1px grey;
+    }
+    50% {
+        box-shadow: 0 0 15px grey;
+    }
+    100% {
+        box-shadow: 0 0 1px grey;
+    }
 }
 
 .details p.date {
@@ -82,8 +178,10 @@ body {
 
 .levelCard .mainInfo {
     display: grid;
+    height: 200px;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 2fr;
+    text-shadow: 0 0 5px grey;
 }
 
 .levelCard .thumbnail {
@@ -102,6 +200,8 @@ body {
 }
 
 .levelCard h3 {
+    margin-top: 30px;
+    margin-bottom: 30px;
     grid-column-start: 2;
     grid-column-end: 6;
     grid-row-start: 1;
@@ -114,6 +214,8 @@ body {
 }
 
 .levelCard h4 {
+    margin-top: 30px;
+    margin-bottom: 30px;
     grid-column-start: 2;
     grid-column-end: 6;
     grid-row-start: 2;

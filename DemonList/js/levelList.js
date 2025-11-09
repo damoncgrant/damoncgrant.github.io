@@ -50,6 +50,12 @@ async function displayLevels() {
             if (event.target.closest("a")) return;
 
             levelCard.classList.toggle("open")
+
+            levelCard.classList.add("blinked")
+
+            levelCard.addEventListener("animationend", () => {
+                levelCard.classList.remove("blinked")
+            }, {once: true})
         })
 
         levelCard.appendChild(mainInfo);
@@ -59,6 +65,25 @@ async function displayLevels() {
     })
 
 }
+
+const header = document.getElementById("pageHeader");
+
+header.addEventListener("click", () => {
+    const previous = header.innerHTML
+    header.innerHTML=`<h3>I will make these do something at some point</h3>`
+
+    setTimeout(() => {
+        header.innerHTML = previous
+    }, 800)
+})
+
+window.addEventListener("beforeunload", () => {
+    window.scrollTo(0,0);
+})
+
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
 
 displayLevels();
 
